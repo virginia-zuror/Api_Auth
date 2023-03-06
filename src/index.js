@@ -29,6 +29,8 @@ server.use('/api/v1/albums', AlbumsRoutes);
 const ArtistsRoutes = require('./api/routes/artists.routes');
 server.use('/api/v1/artists', ArtistsRoutes);
 
+const UsersRoutes = require('./api/routes/users.routes');
+server.use('/api/v1/users', UsersRoutes);
 
 server.use('*', (req, res, next) => {
   const error = new Error('Route not found 🙊');
